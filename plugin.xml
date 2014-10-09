@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.ingenioussofttech.InGContent"
+        version="0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>InGContent</name>
+    
+    <js-module name="InGContent"
+               src="www/InGContent.js">
+        <clobbers target="cordova.plugins.InGContent" />
+    </js-module>
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="InGContent">
+                <param name="ios-package" value="InGContent" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/InGContent.h" />
+        <source-file src="src/ios/InGContent.m" />
+
+       
+
+    </platform>
+</plugin>
